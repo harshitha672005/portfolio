@@ -1,0 +1,577 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    scroll-margin-top: 60px; /* Adjust based on your navbar height */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #7e4a35;
+    line-height: 1.6;
+    background-color: #cab577; /* Light background color for the whole page */
+    padding: 0;
+}
+
+/* Header */
+header {
+    scroll-behavior: smooth;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+     /* Darker background color for header */
+    transition: background-color 0.3s ease;
+}
+
+
+/* Navbar Styles */
+nav {
+    scroll-behavior: smooth;
+    background-color: #674d3c; /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+   
+    box-shadow: #674d3c rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #e0d9d9; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #928484; /* Light background on hover */
+    color: #674d3c; /* Dark text color on hover */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.header-content h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+    font-weight: 700;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+/* Main Content */
+main {
+  
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #ffffff; /* White background for these sections */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: #333; /* Text color for readability */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+#about {
+    display: flex;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 95vw;  /* Full viewport width */
+    background-color: #ffffff; /* White background for contrast */
+    padding: 60px; /* Padding inside the section */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.about-content {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    max-width: 1199px; /* Maximum width of the content */
+    width: 100%; /* Full width of the container */
+    margin-left: 49px; /* Ensure no extra margin on the left */
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 20px; /* Space between text and image */
+}
+
+.about-image {
+    flex: 0 0 200px; /* Fixed width for the image container */
+}
+
+.about-image img {
+    width: 90%; /* Make image take full width of the container */
+    height: 50%;
+    border-radius: 50%; /* Makes the image circular */
+    border: 1px solid #fff; /* Optional: adds a border around the image */
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+}
+
+.header-content h1 {
+    font-size: 3em; /* Larger font size for the name */
+    margin-bottom: 10px;
+    color: #674d3c; /* Darker color for the name */
+}
+
+.header-content p {
+    font-size: 1.5em;
+    color: #6b4f4f; /* Subtle color for the role */
+}
+
+h2 {
+    font-size: 2.5em; /* Larger font size for section heading */
+    margin-bottom: 20px;
+    color: #674d3c; /* Darker color for section heading */
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333; /* Dark color for paragraph text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        
+        align-items: center; /* Center the content horizontally on small screens */
+        text-align: center;
+    }
+
+    .about-image {
+        margin: 20px 0 0 0; /* Space between image and text for small screens */
+    }
+
+    .about-image img {
+        width: 150px; /* Smaller image size for mobile */
+    }
+}
+
+/* Projects Section */
+#projects {
+    
+    background-color: #ffffff; /* White background for the Projects section */
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project a {
+    color: #6b4f4f; /* Accent color for project links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #4a3e3e; /* Darker color on hover */
+    text-decoration: underline;
+}
+
+/* Education Section */
+#education {
+    padding: 40px 20px; /* Extra padding for a spacious feel */
+    background-color: #ffffff; /* White background for contrast */
+}
+
+#education h2 {
+    font-size: 2.5em; /* Larger font size for section header */
+    color: #6b4f4f; /* Accent color for header */
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative; /* For positioning pseudo-element */
+}
+
+.w3-container {
+    margin-bottom: 30px; /* Spacing between education items */
+    background: #ffffff; /* White background for each container */
+    padding: 20px;
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.w3-container:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.w3-text-grey {
+    color: #666; /* Medium grey color for subheadings */
+}
+
+.w3-opacity {
+    opacity: 0.8; /* Slightly reduced opacity for less emphasis */
+}
+
+.w3-text-teal {
+    color: #6b4f4f; /* Teal color for dates */
+}
+
+.w3-margin-right {
+    margin-right: 10px; /* Spacing for icons */
+}
+
+/* Contact Section */
+#contact {
+    background-color: #ffffff; /* Background color for the Contact section */
+    color: #333; /* Text color for readability */
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-item {
+    flex: 1 1 45%;
+    background: #ffffff; /* White background for each contact item */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-item h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #6b4f4f; /* Icon color */
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.contact-item a {
+    color: #6b4f4f; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #4a3e3e; /* Hover color */
+    text-decoration: underline;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1 1 100%;
+    background: #ffffff; /* Background color for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    margin-bottom: 15px;
+    color: #333; /* Heading color */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Label color */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Lighter border for inputs */
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6b4f4f;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    background: #6b4f4f; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #4a3e3e; /* Hover color for the button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    .header-content p {
+        font-size: 1em;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Languages Section */
+.language {
+    padding: 5px;
+    background-color: #ffffff; /* White background for the Languages section */
+}
+
+.language h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin: 0;
+}
+
+.language p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0;
+}
+
+/* Internships Section */
+#internships {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light gray background for contrast */
+}
+
+.internship-item {
+    background-color: #ffffff; /* White background for each item */
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside boxes */
+    margin-bottom: 20px; /* Margin between internship items */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.internship-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow on hover */
+}
+
+.internship-item h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin: 0;
+}
+
+.internship-item h4 {
+    font-size: 1.1em;
+    color: #7d5a50; /* Subtle color for dates */
+    margin-bottom: 10px;
+}
+
+.internship-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Certificates Section */
+#certificates {
+    padding: 40px 20px;
+    background-color: #ffffff; /* Light gray background for contrast */
+}
+
+.certificate-item {
+    background-color: #ffffff; /* White background for each item */
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside boxes */
+    margin-bottom: 20px; /* Margin between certificate items */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow on hover */
+}
+
+.certificate-item h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin: 0;
+}
+
+.certificate-item h4 {
+    font-size: 1.1em;
+    color: #7d5a50; /* Subtle color for dates */
+    margin-bottom: 10px;
+}
+
+.certificate-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #674d3c;
+    margin-top: 10px;
+}
+
+#certificates p {
+    color: #555555;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#certificates ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0 0 20px 0;
+}
+
+#certificates li {
+    margin-bottom: 10px;
+}
+
+#certificates li p {
+    margin: 0;
+    color: #555555;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .language, .internship-item, .certificate-item {
+        margin-bottom: 15px; /* Reduced margin for smaller screens */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .language h3, .internship-item h3, .certificate-item h3 {
+        font-size: 1.2em; /* Smaller heading size for mobile */
+    }
+
+    .language p, .internship-item p, .certificate-item p {
+        font-size: 1em;
+    }
+}
+
+.skill ul {
+    list-style-type: disc;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.skill li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555555;
+}
+
+.project h3 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.project ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.project li {
+    color: #555555;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
